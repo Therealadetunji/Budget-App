@@ -1,4 +1,4 @@
-
+<% if user_signed_in? %>
 <div class="d-flex justify-content-between text-light p-2">
     <%= link_to 'Back', groups_path %>
   </div>
@@ -21,6 +21,7 @@
 <% end %>
 <% else %>
 <p>No Transactions</p>
+<% end %>
 <% end %>
 <div>
     <%= link_to 'Add a Transaction', new_group_entity_path, class: "btn btn-secondary" %>

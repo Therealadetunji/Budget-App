@@ -1,7 +1,8 @@
+<% if user_signed_in? %>
 <h3 class="d-flex justify-content-center text-light">Categories Page</h3>
 
 <h5 class="card p-2 mb-3 bg-success text-white d-flex justify-content-between" style="width: 18rem;"> 
-    Logged In user: <%= @logged_in_user.name %>
+    Logged In user: <%= @logged_in_user.name %> <br />
     Total Amount: <%= @total_amount %>
 </h5>
 
@@ -12,7 +13,7 @@
                 <%= link_to group_entities_path(group.id) do %>
                     <%= group.name %> <br>
                 <% end %>
-                <strong>Icon:</strong>  <%= group.icon %>
+                <strong>Icon:</strong>  <%= image_tag group.icon, height: 150, width: 150, class: "rounded" %>
             </div>
     </div>
 </div>
@@ -22,4 +23,7 @@
 <div>
     <%= link_to 'Add a category', new_group_path, class: "btn btn-secondary" %>
 </div>
+<% else %>
+<%= render partial: "splash/front" %>
+<% end %>
 
