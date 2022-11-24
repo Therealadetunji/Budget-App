@@ -1,8 +1,11 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   def index
+    return unless user_signed_in?
+
     @groups = current_user.groups
     @logged_in_user = current_user
-    @entities = Entity.all
+    @entities = current_user.entities.all
     @amount = []
 
     @entities.each do |entity|

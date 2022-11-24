@@ -1,6 +1,6 @@
 class EntitiesController < ApplicationController
   def index
-    @entities = Entity.all
+    @entities = current_user.entities.all
     @group = Group.find_by(params[:id])
     @amount = []
 
