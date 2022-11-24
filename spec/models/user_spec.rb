@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   user = User.new(
-    name: 'Buff Daddy'
+    name: 'Buff Daddy', email: "buff@gmail.com", password: 551133
   )
+  
 
   describe 'checking the user.rb model' do
     it 'should give the name of the user' do
