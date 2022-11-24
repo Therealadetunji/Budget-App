@@ -2,6 +2,17 @@ class GroupsController < ApplicationController
   def index
     @groups = current_user.groups
     @logged_in_user = current_user
+    @entities = Entity.all
+    @amount = []
+
+    @entities.each do |entity|
+      @amount.push(entity.amount)
+    end
+
+    @total_amount = 0
+    @amount.each do |item|
+      @total_amount += item
+    end
   end
 
   def new
