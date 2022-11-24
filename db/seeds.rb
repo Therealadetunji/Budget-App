@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# User.create(name: 'Michael')
+# User.create(name: 'Emmanuel')
+
+# Group.create(name: 'Imagine dragons', icon: 'https://app-screen.png', author_id: 2)
+
+# Entity.create(name: 'Bank transactions', amount: 1000.0, author_id: 2)

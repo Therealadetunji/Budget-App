@@ -1,0 +1,24 @@
+<h3 class="d-flex justify-content-center text-light">Categories Page</h3>
+
+<h5 class="card p-2 mb-3 bg-success text-white" style="width: 18rem;"> 
+    Logged In user: <%= @loggedinInUser.name %>
+</h5>
+
+        <% @groups.each do |group|%>
+<div class="card-deck mb-3">
+    <div class="card">
+            <div class="card-body text-center">
+                <%= link_to group_entities_path(group.id) do %>
+                    <%= group.name %> <br>
+                <% end %>
+                <strong>Icon:</strong>  <%= group.icon %>
+            </div>
+    </div>
+</div>
+        <% end %>
+
+
+<div>
+    <%= link_to 'Add a category', new_group_path, class: "btn btn-secondary" %>
+</div>
+
