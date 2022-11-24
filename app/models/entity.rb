@@ -8,5 +8,5 @@ class Entity < ApplicationRecord
 
   def recent_transactions
     entity.order(created_at: DESC).limit(3)
- end
+  end
 end

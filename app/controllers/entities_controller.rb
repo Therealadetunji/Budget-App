@@ -11,7 +11,7 @@ class EntitiesController < ApplicationController
     @total_amount = 0
     @amount.each do |item|
       @total_amount += item
-    end 
+    end
   end
 
   def show
