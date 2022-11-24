@@ -14,16 +14,16 @@ class EntitiesController < ApplicationController
 
   def create
     @entity = current_user.entities.new(entities_info)
-        if @entity.save
-          redirect_to group_entities_path, notice: 'Entities created successfully.'
-        else
-          render :new, status: 'Error while creating entities'
-        end
+    if @entity.save
+      redirect_to group_entities_path, notice: 'Entities created successfully.'
+    else
+      render :new, status: 'Error while creating entities'
+    end
   end
 
   private
-      def entities_info
-        params.require(:entities).permit(:name, :amount)
-      end
 
+  def entities_info
+    params.require(:entities).permit(:name, :amount)
+  end
 end

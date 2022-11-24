@@ -6,7 +6,5 @@ class Entity < ApplicationRecord
   has_many :group_entities, dependent: :destroy
   has_many :groups, through: :group_entities
 
-  def recent_transactions
-    
-  end
+  def recent_transactions; end
 end
