@@ -77,4 +77,4 @@ end
 
 gem 'cssbundling-rails'
 
-# gem 'sassc-rails', '~> 2.1'
+gem 'devise'
