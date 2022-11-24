@@ -1,0 +1,18 @@
+<div class="w-full max-w-md">
+  <h3 class="h3 d-flex justify-content-center  text-light">Add New Category</h3>
+  <%= form_with model: @group, class: "form", scope: :groups do |f| %>
+
+    <div class="mb-3">
+    <%= f.label :Name, class: "form-label  text-light" %>
+    <%= f.text_field :name, placeholder: "Add Name", required: true, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+    <%= f.label :icon, class: "form-label  text-light" %>
+    <%= f.url_field :icon, placeholder: "Enter Icon URL", required: true, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Save", class: "btn btn-primary" %>
+    <% end %>
+    
+    </div>

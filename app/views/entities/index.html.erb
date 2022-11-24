@@ -1,0 +1,17 @@
+<h3 class="d-flex justify-content-center text-light">Transactions Page</h3>
+
+<div class="d-flex justify-content-center text-light">
+    <h4>Total Amount:</h4>
+</div>
+
+   <% @entities.each do |entity| %>
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title"><%= entity.name%></h5>
+        <p class="card-text">Amount: <%= entity.amount%></p>
+    </div>
+</div>
+<% end %>
+<div>
+    <%= link_to 'Add a Transaction', new_group_entity_path, class: "btn btn-secondary" %>
+</div>
