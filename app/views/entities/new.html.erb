@@ -1,16 +1,17 @@
-<h2>Transaction Form</h2>
-
+<div class="d-flex justify-content-between text-light p-2">
+    <%= link_to 'Back', group_entities_path %>
+  </div>
+    <h3 class="d-flex justify-content-center text-light">Add new Transaction</h3>
 <div class="w-full max-w-md">
-  <h3 class="h3">Add a Transaction</h3>
   <%= form_with  url:group_entities_path(params[:group_id]), model: @entitiy, class: "form", scope: :entities do |f| %>
 
     <div class="mb-3">
-    <%= f.label :Name, class: "form-label" %>
+    <%= f.label :Name, class: "form-label text-light" %>
     <%= f.text_field :name, placeholder: "Add a Name", required: true, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-    <%= f.label :amount, class: "form-label" %>
+    <%= f.label :amount, class: "form-labe text-light" %>
     <%= f.number_field :amount, placeholder: "Enter the amount here", required: true, class: "form-control" %>
     </div>
 
