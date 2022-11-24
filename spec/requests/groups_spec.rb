@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
-
   before do
     @new_user = User.new(name: 'testing', email: 'testing@test.com', password: 1_234_567,
                          password_confirmation: 1_234_567)
