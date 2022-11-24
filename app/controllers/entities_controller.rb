@@ -2,6 +2,16 @@ class EntitiesController < ApplicationController
   def index
     @entities = Entity.all
     @group = Group.find_by(params[:id])
+    @amount = []
+
+    @entities.each do |entity|
+      @amount.push(entity.amount)
+    end
+
+    @total_amount = 0
+    @amount.each do |item|
+      @total_amount += item
+    end 
   end
 
   def show
