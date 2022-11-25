@@ -1,0 +1,15 @@
+<nav class="bg-primary text-white py-2 mb-3">
+  <ul class="navbar-nav w-100 d-flex flex-row ">
+    <% if user_signed_in? %>
+    <li>
+    <%= link_to 'Back', groups_path, class: "btn text-white" %>
+  </li>
+      <li class="flex-grow-1 text-center">
+        <h3>TRANSACTIONS</h3>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign Out', destroy_user_session_path, class: "nav-link" %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
