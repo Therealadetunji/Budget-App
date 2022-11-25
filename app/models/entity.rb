@@ -7,6 +7,6 @@ class Entity < ApplicationRecord
   has_many :groups, through: :group_entities
 
   def recent_transactions
-    entity.order(created_at: DESC).limit(3)
+    entities.order(created_at: DESC).limit(3)
   end
 end
