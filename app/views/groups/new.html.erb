@@ -1,17 +1,15 @@
-  <div class="d-flex justify-content-between text-light p-2">
+    <div class="d-flex justify-content-between text-primary p-2">
     <%= link_to 'Back', groups_path %>
   </div>
-    <h3 class="d-flex justify-content-center text-light">Add a new category</h3>
+    <h3 class="d-flex justify-content-center text-primary">Add a new category</h3>
 <div class="w-full max-w-md">
   <%= form_with model: @group, class: "form", scope: :groups do |f| %>
 
     <div class="mb-3">
-    <%= f.label :Name, class: "form-label  text-light" %>
     <%= f.text_field :name, placeholder: "Add Name", required: true, class: "form-control" %>
     </div>
 
     <div class="mb-3">
-    <%= f.label :icon, class: "form-label  text-light" %>
     <%= f.url_field :icon, placeholder: "Enter Icon URL", required: true, class: "form-control" %>
     </div>
 

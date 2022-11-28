@@ -1,12 +1,9 @@
 <% if user_signed_in? %>
-<div class="d-flex justify-content-between text-light p-2">
-    <%= link_to 'Back', groups_path %>
-  </div>
-    <h3 class="d-flex justify-content-center text-light">Transactions</h3>
-<div class="d-flex justify-content-center text-light">
+<%= render 'layouts/entities' %>
+<div class="d-flex justify-content-center">
     <h4>Most Recent</h4>
 </div>
-<div class="d-flex justify-content-end text-light">
+<div class="d-flex justify-content-end">
     <h4>Total Amount: <%= @total_amount%></h4>
 </div>
 
@@ -22,7 +19,7 @@
 </div>
 <% end %>
 <% else %>
-<p>No Transactions</p>
+<p class="text-light">No Transactions</p>
 <% end %>
 <% end %>
 <div>
