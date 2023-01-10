@@ -2,7 +2,11 @@
 
 # Home Budget App
 
-> A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> Description the project.
+
+    A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+
+
 
 ## Live demo:
 You can check out the live demo [here](https://shrouded-fjord-77667.herokuapp.com/).
