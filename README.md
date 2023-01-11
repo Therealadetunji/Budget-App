@@ -6,6 +6,13 @@
 
     A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
+## Built With
+>
+- Ruby & Ruby on Rails
+- Devise
+- Bootstrap 5
+- Postgresql
+- Rspec
 
 
 ## Live demo:
@@ -15,13 +22,6 @@ You can check out the live demo [here](https://shrouded-fjord-77667.herokuapp.co
 ## Entity Relationship Diagram
 <img src="https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png" width="600">
 
-## Made With
-
-- Ruby & Ruby on Rails
-- Devise
-- Bootstrap 5
-- Postgresql
-- Rspec
 
 ## Getting Started
 
